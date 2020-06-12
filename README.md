@@ -25,5 +25,8 @@ Install a halium rootfs and systemimage:
 Connect to the device:
 `./connect.py -p $protocol -u $username`
 
+### Create Flashable
+. halium-install --system-as-root rootfs.tar.gz system.img
+
 ### Standalone version
 If you want to use this shell script independently of this folder, create a standalone script of it by executing `bash utils/standalone.sh`. You will find the executable in bin/halium-install-standalone.sh.

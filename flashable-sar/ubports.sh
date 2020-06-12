@@ -34,7 +34,7 @@ mv -f /data/ubports/data/rootfs-mount/etc/rc.local /data/linux/Rootfs/etc/;
 chmod 0644 /data/linux/Rootfs/etc/init/mount-android.conf;
 chmod 0755 /data/linux/Rootfs/etc/rc.local;
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-cat /data/linux/System/ueventd*.rc /data/linux/Vendor/ueventd*.rc | grep ^/dev | sed -e 's/^\/dev\///' | awk '{printf "ACTION==\"add\", KERNEL==\"%s\", OWNER=\"%s\", GROUP=\"%s\", MODE=\"%s\"\n",$1,$3,$4,$2}' | sed -e 's/\r//' >/data/linux/Rootfs/etc/udev/rules.d/70-whyred.rules;
+cat /data/linux/System/ueventd*.rc /data/linux/Vendor/ueventd*.rc | grep ^/dev | sed -e 's/^\/dev\///' | awk '{printf "ACTION==\"add\", KERNEL==\"%s\", OWNER=\"%s\", GROUP=\"%s\", MODE=\"%s\"\n",$1,$3,$4,$2}' | sed -e 's/\r//' >/data/linux/Rootfs/etc/udev/rules.d/70-grus.rules;
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 umount /data/linux/Rootfs;
 umount /data/linux/System;
